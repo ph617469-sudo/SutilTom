@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+:root {
+    --primary-rosé: #c97a7a;
+    --accent-rosé: #e68a8a;
+    --dark-text: #4a2c2c;
+    --bg-nude: #fdf8f7;
+    --glass-bg: rgba(253, 248, 247, 0.85);
+    --glass-border: rgba(201, 122, 122, 0.15);
+}
+
+body { 
+    font-family: 'Poppins', sans-serif; 
+    background: var(--bg-nude); 
+    color: var(--dark-text); 
+    line-height: 1.6; 
+    padding-top: 90px; 
+    overflow-x: hidden;
+}
+
+.container { max-width: 1400px; margin: 0 auto; padding: 0 20px; }
+
+/* HEADER TRANSLÚCIDO E FIXO */
+header {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    position: fixed;
+    width: 100%; top: 0; z-index: 1000;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.header-flex { display: flex; justify-content: space-between; align-items: center; }
+
+.logo h1 { font-family: 'Playfair Display', serif; color: var(--primary-rosé); font-size: 28px; text-transform: uppercase; letter-spacing: 3px; }
+.logo p { font-size: 9px; letter-spacing: 4px; color: var(--accent-rosé); text-align: center; margin-top: -5px; }
+
+nav ul { display: flex; list-style: none; gap: 30px; }
+nav ul li a { text-decoration: none; color: var(--dark-text); font-size: 12px; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+nav ul li a:hover, nav ul li a.active { color: var(--primary-rosé); }
+
+/* HERO (BANNER PRINCIPAL) */
+.hero-premium {
+    height: 85vh;
+    display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(rgba(253, 248, 247, 0.5), rgba(253, 248, 247, 0.5)), 
+                url('imagens/imagem_2026-03-22_224519504.jpg') center/cover fixed;
+    text-align: center;
+}
+.hero-content { background: var(--glass-bg); backdrop-filter: blur(15px); padding: 50px; border: 1px solid var(--glass-border); width: 90%; max-width: 800px; }
+.hero-content h2 { font-family: 'Playfair Display', serif; font-size: clamp(35px, 6vw, 70px); color: var(--primary-rosé); margin-bottom: 15px; line-height: 1.1; }
+.hero-content h2 span { font-style: italic; color: var(--accent-rosé); }
+
+/* SEÇÕES E GRIDS */
+.section-full { padding: 80px 0; }
+.section-header { text-align: center; margin-bottom: 60px; }
+.section-header h2 { font-family: 'Playfair Display', serif; font-size: 40px; color: var(--primary-rosé); margin-bottom: 10px; }
+.sku-label { font-size: 12px; font-weight: 600; color: var(--accent-rosé); letter-spacing: 2px; display: block; margin-bottom: 5px;}
+
+.product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+
+/* CARDS COM EFEITO VIDRO */
+.product-card { 
+    background: var(--glass-bg); 
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border); 
+    transition: 0.4s; 
+    text-align: center; 
+}
+.product-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); border-color: var(--primary-rosé); }
+.product-img { height: 400px; overflow: hidden; background: rgba(253, 248, 247, 0.4); }
+.product-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.8s; }
+.product-card:hover .product-img img { transform: scale(1.05); }
+.product-info { padding: 30px; }
+.product-info h3 { font-family: 'Playfair Display', serif; font-size: 24px; color: var(--dark-text); margin: 10px 0; }
+.product-info p { font-size: 14px; margin-bottom: 20px; color: #666; }
+.price-row { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--glass-border); }
+.price { font-size: 20px; font-weight: 600; color: var(--dark-text); }
+
+/* BOTÕES */
+.btn-lux {
+    background: var(--accent-rosé); color: #fff; padding: 15px 35px;
+    text-decoration: none; display: inline-block; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; border: 1px solid var(--accent-rosé); transition: 0.3s; cursor: pointer;
+}
+.btn-lux:hover { background: transparent; color: var(--accent-rosé); }
+.btn-small { padding: 10px 20px; font-size: 11px; }
+
+/* FOOTER */
+footer { background: #2c1a1a; color: #fdf8f7; padding: 80px 0 30px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 50px; }
+.footer-logo h2 { font-family: 'Playfair Display', serif; font-size: 30px; color: var(--accent-rosé); margin-bottom: 15px; }
+.footer-links a, .footer-social p { color: #fdf8f7; text-decoration: none; display: block; margin-bottom: 10px; font-size: 14px; opacity: 0.8; transition: 0.3s; }
+.footer-links a:hover { opacity: 1; color: var(--accent-rosé); }
+
+/* POP-UP (MODAL BASE) */
+.modal-detalhe {
+    display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(74, 44, 44, 0.9); z-index: 2000; align-items: center; justify-content: center; backdrop-filter: blur(10px);
+}
+.modal-detalhe.active { display: flex; }
+.modal-content { background: #fff; display: flex; position: relative; max-width: 1000px; width: 90%; max-height: 90vh; }
+.modal-fechar { position: absolute; right: 20px; top: 10px; font-size: 40px; cursor: pointer; color: var(--primary-rosé); z-index: 10; line-height: 1; }
+.modal-lado-esq { flex: 1; height: 500px; }
+.modal-lado-esq img { width: 100%; height: 100%; object-fit: cover; }
+.modal-lado-dir { flex: 1; padding: 50px; display: flex; flex-direction: column; justify-content: center; }
+
+/* ==========================================
+   NOVAS REGRAS PARA A PÁGINA DE AVALIAÇÕES
+   ========================================== */
+
+.review-container-flex {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.review-form-box {
+    flex: 1;
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--glass-border);
+    padding: 40px;
+    position: sticky;
+    top: 120px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+.review-feed {
+    flex: 2;
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--dark-text);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.input-group input, .input-group select, .input-group textarea {
+    width: 100%;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid var(--glass-border);
+    color: var(--dark-text);
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus, .input-group select:focus, .input-group textarea:focus {
+    border-color: var(--primary-rosé);
+    background: #fff;
+}
+
+/* Estrelas do Formulário */
+.star-rating-input i {
+    color: #ccc;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.star-rating-input i.active {
+    color: #D4AF37; /* Dourado luxuoso */
+}
+
+/* Cards de Comentários */
+.reviews-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.review-card {
+    background: #fff;
+    padding: 30px;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.02);
+    border-left: 4px solid var(--primary-rosé);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.reviewer-info h4 {
+    font-family: 'Playfair Display';
+    font-size: 20px;
+    color: var(--dark-text);
+}
+
+.reviewer-info span {
+    font-size: 12px;
+    color: var(--primary-rosé);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stars i {
+    color: #D4AF37;
+    font-size: 14px;
+}
+
+.review-text {
+    font-style: italic;
+    color: #666;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Animação quando posta um novo card */
+@keyframes slideDownIn {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.new-review-anim {
+    animation: slideDownIn 0.8s ease-out forwards;
+}
+
+/* ==========================================
+   RESPONSIVIDADE (SÓ ATIVA NO CELULAR/TABLET)
+   ========================================== */
+@media (max-width: 992px) {
+    .product-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+    
+    /* Quebra o formulário e as avaliações no celular */
+    .review-container-flex { flex-direction: column; }
+    .review-form-box { position: relative; top: 0; width: 100%; }
+}
+
+@media (max-width: 768px) {
+    body { padding-top: 80px; }
+    header .container { flex-direction: column; gap: 15px; }
+    nav ul { gap: 15px; }
+    nav ul li a { font-size: 10px; }
+    
+    .hero-premium { height: 70vh; background-attachment: scroll; }
+    .hero-content { padding: 30px; }
+    
+    .product-grid { grid-template-columns: 1fr; }
+    .product-img { height: 350px; }
+    
+    .velvet-flex { flex-direction: column !important; gap: 30px !important; }
+    .velvet-img { height: 400px !important; }
+
+    .modal-content { flex-direction: column; width: 95%; overflow-y: auto; }
+    .modal-lado-esq { height: 350px; min-width: 100%; }
+    .modal-lado-dir { padding: 30px; text-align: center; }
+    .modal-lado-dir h2 { font-size: 32px !important; }
+}

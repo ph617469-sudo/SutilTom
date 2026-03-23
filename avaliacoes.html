@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiências | Sutil Tom</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-flex">
+            <a href="index.html" style="text-decoration: none; color: inherit;">
+                <div class="logo">
+                    <h1>Sutil Tom</h1>
+                    <p>Nail Industry</p>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">início</a></li>
+                    <li><a href="cores.html">Coleções</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="avaliacoes.html" class="active">Experiências</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-premium" style="background: linear-gradient(rgba(44, 26, 26, 0.7), rgba(44, 26, 26, 0.8)), url('imagens/WhatsApp Image 2026-03-20 at 16.04.34.jpeg') center/cover fixed; height: 60vh;">
+        <div class="container" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%;">
+            <div class="hero-content" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255,255,255,0.1); padding: 50px 30px; text-align: center; width: 100%; max-width: 800px; box-shadow: 0 30px 60px rgba(0,0,0,0.3);">
+                <span class="sku-label" style="letter-spacing: 5px; color: var(--accent-rosé);">VOZES DA ELEGÂNCIA</span>
+                <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(35px, 6vw, 60px); color: #ffffff; margin: 15px 0;">O que dizem nossas <span>Clientes</span></h2>
+                <p style="color: #dddddd; font-weight: 300;">A excelência da Sutil Tom atestada pelas profissionais mais exigentes do mercado.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-full">
+        <div class="container review-container-flex">
+            
+            <div class="review-form-box">
+                <h3 style="font-family: 'Playfair Display'; font-size: 30px; color: var(--primary-rosé); margin-bottom: 20px;">Compartilhe sua Experiência</h3>
+                <p style="font-size: 14px; margin-bottom: 30px; color: #666;">Sua opinião é fundamental para nossa indústria. Avalie nossos esmaltes em gel.</p>
+                
+                <form id="form-avaliacao">
+                    <div class="input-group">
+                        <label for="nome">Seu Nome ou Estúdio</label>
+                        <input type="text" id="nome" required placeholder="Ex: Camila - Studio Beauty">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="produto">Produto Avaliado</label>
+                        <select id="produto" required>
+                            <option value="" disabled selected>Escolha o Esmalte...</option>
+                            <option value="Nude Radiante Lux">Nude Radiante Lux</option>
+                            <option value="Nude Absoluto">Nude Absoluto</option>
+                            <option value="Vinho Royal">Vinho Royal</option>
+                            <option value="Ametista Radiante">Ametista Radiante</option>
+                            <option value="Outro (Coleção Aurora)">Coleção Aurora Boreal</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Avaliação</label>
+                        <div class="star-rating-input" id="star-selector">
+                            <i class="fas fa-star" data-value="1"></i>
+                            <i class="fas fa-star" data-value="2"></i>
+                            <i class="fas fa-star" data-value="3"></i>
+                            <i class="fas fa-star" data-value="4"></i>
+                            <i class="fas fa-star" data-value="5"></i>
+                        </div>
+                        <input type="hidden" id="nota" value="5" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="comentario">Seu Feedback</label>
+                        <textarea id="comentario" rows="4" required placeholder="Conte-nos sobre a pigmentação, durabilidade e brilho..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-lux" style="width: 100%; text-align: center;">Publicar Avaliação</button>
+                </form>
+            </div>
+
+            <div class="review-feed">
+                <div class="section-header" style="text-align: left; margin-bottom: 30px;">
+                    <h2 style="font-size: 35px;">Feedbacks Recentes</h2>
+                </div>
+                
+                <div id="lista-avaliacoes" class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <h4>Amanda Silva Nail Designer</h4>
+                                <span>Nude Radiante Lux</span>
+                            </div>
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                        <p class="review-text">"Simplesmente perfeito! O brilho desse esmalte é surreal e minhas clientes estão apaixonadas. A durabilidade realmente cumpre o que promete, passou de 15 dias intacto."</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <h4>Studio Elegance</h4>
+                                <span>Vinho Royal</span>
+                            </div>
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                        <p class="review-text">"A pigmentação é HD mesmo. Com uma camada já cobre tudo. Qualidade industrial que facilita muito o tempo de mesa. Recomendo de olhos fechados."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-logo">
+                <h2>Sutil Tom</h2>
+                <p style="font-size: 14px; opacity: 0.8; margin-top: 10px;">Nail Industry Luxury.</p>
+            </div>
+            <div class="footer-links">
+                <h4 style="color: var(--accent-rosé); margin-bottom: 20px; font-weight: 600;">Navegação</h4>
+                <a href="index.html">Início</a>
+                <a href="cores.html">Coleções</a>
+                <a href="avaliacoes.html">Experiências</a>
+            </div>
+            <div class="footer-links">
+                <h4 style="color: var(--accent-rosé); margin-bottom: 20px; font-weight: 600;">Contato</h4>
+                <a href="#">Instagram: @sutiltom</a>
+                <a href="#">WhatsApp: (11) 4002-8922</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Lógica para selecionar as estrelas no formulário
+        const stars = document.querySelectorAll('#star-selector i');
+        const inputNota = document.getElementById('nota');
+
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                const value = star.getAttribute('data-value');
+                inputNota.value = value;
+                
+                stars.forEach(s => {
+                    s.classList.remove('active');
+                    if (s.getAttribute('data-value') <= value) {
+                        s.classList.add('active');
+                    }
+                });
+            });
+            // Inicia todas marcadas
+            star.classList.add('active'); 
+        });
+
+        // Lógica para receber o formulário e criar um novo card
+        const form = document.getElementById('form-avaliacao');
+        const lista = document.getElementById('lista-avaliacoes');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Impede a página de recarregar
+
+            // Pega os valores digitados
+            const nome = document.getElementById('nome').value;
+            const produto = document.getElementById('produto').value;
+            const nota = inputNota.value;
+            const comentario = document.getElementById('comentario').value;
+
+            // Gera as estrelas em HTML
+            let starsHTML = '';
+            for(let i = 0; i < 5; i++) {
+                if(i < nota) starsHTML += '<i class="fas fa-star"></i>';
+                else starsHTML += '<i class="far fa-star"></i>'; // estrela vazia
+            }
+
+            // Cria o novo elemento HTML do comentário
+            const novoCard = document.createElement('div');
+            novoCard.classList.add('review-card', 'new-review-anim');
+            
+            novoCard.innerHTML = `
+                <div class="review-header">
+                    <div class="reviewer-info">
+                        <h4>${nome}</h4>
+                        <span>${produto}</span>
+                    </div>
+                    <div class="stars">${starsHTML}</div>
+                </div>
+                <p class="review-text">"${comentario}"</p>
+            `;
+
+            // Adiciona o novo comentário no topo da lista
+            lista.prepend(novoCard);
+
+            // Limpa o formulário e mostra um alerta chique
+            form.reset();
+            stars.forEach(s => s.classList.add('active')); // reseta as estrelas
+            inputNota.value = "5";
+            
+            alert("Muito obrigado! Sua avaliação foi adicionada ao nosso mural.");
+        });
+    </script>
+</body>
+</html>

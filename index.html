@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sutil Tom | Nail Industry Luxury</title>
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        /* Pequena animação para a linha de scroll do banner */
+        @keyframes fadeScroll {
+            0% { opacity: 0.3; transform: translateY(0); }
+            50% { opacity: 1; transform: translateY(5px); }
+            100% { opacity: 0.3; transform: translateY(0); }
+        }
+        .scroll-indicator { animation: fadeScroll 2s infinite ease-in-out; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-flex">
+            <a href="index.html" style="text-decoration: none; color: inherit;">
+                <div class="logo">
+                    <h1>Sutil Tom</h1>
+                    <p>Nail Industry</p>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">início</a></li>
+                    <li><a href="cores.html">Coleções</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="avaliacoes.html">Experiências</a></li> </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-premium" style="background: linear-gradient(rgba(44, 26, 26, 0.75), rgba(44, 26, 26, 0.85)), url('imagens/imagem_2026-03-22_224519504.jpg') center/cover fixed;">
+        <div class="container" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; position: relative;">
+            
+            <div class="hero-content" style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.1); padding: 60px 40px; text-align: center; width: 100%; max-width: 800px; box-shadow: 0 30px 60px rgba(0,0,0,0.3);">
+                <span style="letter-spacing: 6px; font-size: 12px; font-weight: 600; color: var(--accent-rosé); text-transform: uppercase;">Estética Industrial</span>
+                
+                <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(40px, 8vw, 75px); color: #ffffff; margin: 20px 0; line-height: 1.1;">A Maestria em <span style="color: var(--accent-rosé); font-style: italic;">Gel</span></h2>
+                
+                <p style="font-size: 18px; color: #dddddd; margin-bottom: 40px; font-weight: 300; line-height: 1.8;">A união perfeita entre a alta tecnologia de laboratório e o acabamento de luxo que as profissionais mais exigentes buscam.</p>
+                
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                    <a href="cores.html" class="btn-lux">Explorar Coleções</a>
+                    <a href="avaliacoes.html" class="btn-lux" style="background: transparent; border-color: rgba(255,255,255,0.5); color: #ffffff;">Ver Avaliações</a>
+                </div>
+            </div>
+
+            <div class="scroll-indicator" style="position: absolute; bottom: 40px; display: flex; flex-direction: column; align-items: center;">
+                <span style="color: #ffffff; font-size: 10px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 10px;">Descubra</span>
+                <div style="width: 1px; height: 50px; background: linear-gradient(to bottom, #ffffff, transparent);"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section-full">
+        <div class="container">
+            <div class="section-header">
+                <span class="sku-label" style="letter-spacing: 5px;">NEW ARRIVAL</span>
+                <h2>Linha Velvet Gloss</h2>
+            </div>
+
+            <div class="velvet-flex" style="display: flex; align-items: center; gap: 60px; background: var(--glass-bg); padding: 30px; border: 1px solid var(--glass-border); box-shadow: 0 20px 40px rgba(0,0,0,0.05);">
+                <div class="velvet-img" style="flex: 1; min-width: 300px; height: 500px;">
+                    <img src="imagens/WhatsApp Image 2026-03-20 at 16.06.11.jpeg" alt="Nude Radiante Lux" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="flex: 1; min-width: 300px; padding: 20px;">
+                    <span class="sku-label">#ST-LUX</span>
+                    <h3 style="font-family: 'Playfair Display'; font-size: 40px; color: var(--primary-rosé); margin-bottom: 20px;">Nude Radiante Lux</h3>
+                    <p style="font-size: 16px; margin-bottom: 30px; color: var(--dark-text);">A nova era dos nudes industriais. Uma fórmula exclusiva que une a suavidade do acabamento acetinado com a resistência extrema do gel.</p>
+                    <button class="btn-lux btn-detalhes" 
+                            data-nome="Nude Radiante Lux"
+                            data-sku="#ST-LUX"
+                            data-img="imagens/WhatsApp Image 2026-03-20 at 16.06.11.jpeg"
+                            data-desc="Desenvolvido em nossa planta industrial de 500m², possui pigmentação HD e brilho persistente por 15 dias.">
+                        Ver Lançamento
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-full">
+        <div class="container">
+            <div class="section-header">
+                <h2>Coleção Gel 15 Dias</h2>
+                <p>Os favoritos das profissionais</p>
+            </div>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img"><img src="imagens/WhatsApp Image 2026-03-20 at 15.53.39.jpeg" alt="Nude Absoluto"></div>
+                    <div class="product-info">
+                        <h3>Nude Absoluto</h3>
+                        <p>O equilíbrio perfeito.</p>
+                        <button class="btn-lux btn-small btn-detalhes" data-nome="Nude Absoluto" data-sku="#ST-01" data-img="imagens/WhatsApp Image 2026-03-20 at 15.53.39.jpeg" data-desc="A elegância do nude em sua forma pura. Brilho espelhado e fixação de até 15 dias.">Detalhes</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img"><img src="imagens/WhatsApp Image 2026-03-20 at 16.04.34.jpeg" alt="Vinho Royal"></div>
+                    <div class="product-info">
+                        <h3>Vinho Royal</h3>
+                        <p>Profundidade intensa.</p>
+                        <button class="btn-lux btn-small btn-detalhes" data-nome="Vinho Royal" data-sku="#ST-02" data-img="imagens/WhatsApp Image 2026-03-20 at 16.04.34.jpeg" data-desc="O clássico vinho em versão industrial. Pigmentação rica e sedutora.">Detalhes</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img"><img src="imagens/WhatsApp Image 2026-03-22 at 14.15.44.jpeg" alt="Cerejeira"></div>
+                    <div class="product-info">
+                        <h3>Cerejeira Encantada</h3>
+                        <p>A força do gel industrial.</p>
+                        <button class="btn-lux btn-small btn-detalhes" data-nome="Cerejeira Encantada" data-sku="#ST-03" data-img="imagens/WhatsApp Image 2026-03-22 at 14.15.44.jpeg" data-desc="Rosa vibrante inspirado na delicadeza oriental. Alta cobertura.">Detalhes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-full" style="background: rgba(201, 122, 122, 0.05);">
+        <div class="container velvet-flex" style="display: flex; align-items: center; gap: 60px;">
+            <div style="flex: 1;">
+                <h2 style="font-family: 'Playfair Display'; font-size: 35px; color: var(--primary-rosé);">Qualidade de Fábrica</h2>
+                <p style="margin: 20px 0 30px;">Estrutura de 500m² dedicada a entregar o melhor esmalte em gel do Brasil.</p>
+                <a href="sobre.html" class="btn-lux" style="background: transparent; color: var(--primary-rosé);">Nossa História</a>
+            </div>
+            <div class="velvet-img" style="flex: 1; height: 350px; background: url('imagens/WhatsApp Image 2026-03-20 at 16.04.34.jpeg') center/cover;"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-logo">
+                <h2>Sutil Tom</h2>
+                <p style="font-size: 14px; opacity: 0.8; margin-top: 10px;">Nail Industry Luxury.</p>
+            </div>
+            <div class="footer-links">
+                <h4 style="color: var(--accent-rosé); margin-bottom: 20px; font-weight: 600;">Navegação</h4>
+                <a href="cores.html">Coleções</a>
+                <a href="sobre.html">A Fábrica</a>
+                <a href="avaliacoes.html">Experiências</a>
+            </div>
+            <div class="footer-links">
+                <h4 style="color: var(--accent-rosé); margin-bottom: 20px; font-weight: 600;">Contato</h4>
+                <a href="#">Instagram: @sutiltom</a>
+                <a href="#">WhatsApp: (11) 4002-8922</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal-detalhe">
+        <div class="modal-content">
+            <span class="modal-fechar">&times;</span>
+            <div class="modal-lado-esq"><img src="" class="modal-img"></div>
+            <div class="modal-lado-dir">
+                <h2 class="modal-titulo" style="font-family: 'Playfair Display'; font-size: 40px; color: var(--primary-rosé);">Nome</h2>
+                <p class="modal-sku" style="color: var(--accent-rosé); font-weight: 600; margin-bottom: 15px;">#SKU</p>
+                <p class="modal-descricao" style="color: #666; font-size: 15px; margin-bottom: 30px;"></p>
+                <a href="#" id="link-whatsapp-modal" class="btn-lux" style="text-align: center;" target="_blank">Pedir via WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.querySelector('.modal-detalhe');
+        const modalImg = document.querySelector('.modal-img');
+        const modalTitulo = document.querySelector('.modal-titulo');
+        const modalSku = document.querySelector('.modal-sku');
+        const modalDescricao = document.querySelector('.modal-descricao');
+        const modalFechar = document.querySelector('.modal-fechar');
+        const linkWhats = document.getElementById('link-whatsapp-modal');
+
+        document.querySelectorAll('.btn-detalhes').forEach(botao => {
+            botao.addEventListener('click', () => {
+                const nome = botao.getAttribute('data-nome');
+                const sku = botao.getAttribute('data-sku');
+                modalTitulo.innerText = nome;
+                modalImg.src = botao.getAttribute('data-img');
+                modalSku.innerText = sku;
+                modalDescricao.innerText = botao.getAttribute('data-desc');
+                
+                const msg = encodeURIComponent(`Olá! Tenho interesse no esmalte ${nome} (${sku}).`);
+                linkWhats.href = `https://wa.me/5511999999999?text=${msg}`;
+                
+                modal.classList.add('active');
+            });
+        });
+
+        modalFechar.onclick = () => modal.classList.remove('active');
+        window.onclick = (e) => { if (e.target == modal) modal.classList.remove('active'); };
+    </script>
+</body>
+</html>
